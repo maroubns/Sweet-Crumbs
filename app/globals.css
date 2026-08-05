@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Sweet Crumbs palette */
+  --cream: #fff8f0;
+  --cream-deep: #fbeee0;
+  --blush: #f4c2c2;
+  --blush-deep: #e8a3a8;
+  --sage: #a8b79d;
+  --sage-deep: #7c8f70;
+  --sage-ink: #57674c;
+  --espresso: #6b4226;
+  --espresso-deep: #4a2c18;
+
+  --background: var(--cream);
+  --foreground: var(--espresso-deep);
+
+  --card: #ffffff;
+  --card-foreground: var(--espresso-deep);
+
+  --popover: #ffffff;
+  --popover-foreground: var(--espresso-deep);
+
+  --primary: var(--espresso);
+  --primary-foreground: #fff8f0;
+
+  --secondary: var(--blush);
+  --secondary-foreground: var(--espresso-deep);
+
+  --muted: var(--cream-deep);
+  --muted-foreground: #7a5a42;
+
+  --accent: var(--sage);
+  --accent-foreground: var(--espresso-deep);
+
+  --destructive: #a83c1f;
+  --destructive-foreground: #ffffff;
+
+  --border: #ecdfd0;
+  --input: #ecdfd0;
+  --ring: var(--sage-deep);
+
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-blush: var(--blush);
+  --color-blush-deep: var(--blush-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-sage-ink: var(--sage-ink);
+  --color-espresso: var(--espresso);
+  --color-espresso-deep: var(--espresso-deep);
+
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 12px);
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+  :focus-visible {
+    outline: 2px solid var(--sage-deep);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .font-script {
+    font-family: var(--font-playfair);
+    font-style: italic;
+  }
+}
