@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sweet Crumbs — Boutique Cake Studio
 
 Welcome to the Sweet Crumbs site. This is a clean, soft, and polished portfolio-style website built for a cake designer who wants an elegant, modern online presence.
@@ -69,3 +70,6 @@ This is the heart of the content.
 This folder holds the site’s illustrations and placeholder visuals.
 
 
+=======
+# Sweet-Crumbs
+>>>>>>> 7f0aff593c66acafce9f17e51801fbc772b024e7
